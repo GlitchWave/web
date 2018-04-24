@@ -1,3 +1,8 @@
+const book = require('../../images/book.png'),
+      eye = require('../../images/eye.png'),
+      illuminati = require('../../images/iluminati.png'),
+      top = require('../../images/top.png');
+
 import React from 'react';
 
 import Footer from '../Common/Footer';
@@ -9,10 +14,16 @@ import Footer from '../Common/Footer';
 const Main = (props) => {
     return (
         <div className="Main" >
-            <div className="Navigation">
-                <div className="NavigationItem"><img src="" alt=""/></div>
-                <div className="NavigationItem"><img src="" alt=""/></div>
-                <div className="NavigationItem"><img src="" alt=""/></div>
+            <div className="MainTopCircles">
+                <img src={top} alt="circles"/>
+            </div>
+            <div className="MainHoveredText">
+                <p>{props.displayedText}</p>
+            </div>
+            <div className="MainNavigation">
+                <div className="MainNavigationItem"><img src={eye} alt="About us"/></div>
+                <div className="MainNavigationItem"><img src={illuminati} alt="Gallery"/></div>
+                <div className="MainNavigationItem"><img src={book} alt="Contacts"/></div>
             </div>
             <Footer />
         </div>

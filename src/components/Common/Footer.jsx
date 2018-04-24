@@ -1,3 +1,5 @@
+const logo = require('../../images/logo.png');
+
 import React from 'react';
 
 const Footer = () => {
@@ -7,7 +9,7 @@ const Footer = () => {
                 <p>&copy; 2018 Equinox. All rights reserved.</p>
             </div>
             <div className="FooterLogo">
-                <img src="" alt="logo"/>
+                <img src={logo} alt="logo"/>
             </div>
         </div>
     )
