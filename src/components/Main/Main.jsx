@@ -4,6 +4,7 @@ const book = require('../../images/book.png'),
       top = require('../../images/top.png');
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Footer from '../Common/Footer';
 
@@ -20,9 +21,9 @@ const Main = (props) => {
                 <p>{props.displayedText}</p>
             </div>
             <div className="MainNavigation">
-                <div className="MainNavigationItem"><img src={eye} alt="About us"/></div>
-                <div className="MainNavigationItem"><img src={illuminati} alt="Gallery"/></div>
-                <div className="MainNavigationItem"><img src={book} alt="Contacts"/></div>
+                <Link to="/info" className="MainNavigationItem" ><img src={eye} alt="About us"/></Link>
+                <Link to="/projects" className="MainNavigationItem" ><img src={illuminati} alt="Gallery"/></Link>
+                <Link to="/contacts" className="MainNavigationItem" ><img src={book} alt="Contacts"/></Link>
             </div>
             <Footer />
         </div>
