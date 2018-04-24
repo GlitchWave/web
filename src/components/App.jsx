@@ -25,6 +25,7 @@ class AppComponent extends React.Component {
           <Route path='/' exact render={({history}) => (
             <Main history={history}
                   displayedText={this.state.displayedText}
+                  height={this.state.mainComponentHeight}
              />
           )} />
           <Route path='/contacts' exact render={({history}) => (

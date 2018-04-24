@@ -8,8 +8,14 @@ import App from './components/App';
 
 // Render the main component into the dom
 
-ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
-, document.getElementById('app'));
+function Init() {
+    document.getElementById('app').style.height = window.innerHeight.toString() + 'px';
+
+    ReactDOM.render(
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    , document.getElementById('app'));
+}
+
+Init();
