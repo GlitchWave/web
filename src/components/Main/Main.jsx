@@ -21,9 +21,24 @@ const Main = (props) => {
                 <p>{props.displayedText}</p>
             </div>
             <div className="MainNavigation">
-                <Link to="/info" className="MainNavigationItem" ><img src={eye} alt="About us"/></Link>
-                <Link to="/projects" className="MainNavigationItem" ><img src={illuminati} alt="Gallery"/></Link>
-                <Link to="/contacts" className="MainNavigationItem" ><img src={book} alt="Contacts"/></Link>
+                <Link to="/info"
+                      className="MainNavigationItem"
+                      onMouseOver={props.changeTitle('info')}
+                      onMouseOut={props.changeTitle('equinox')} >
+                    <img src={eye} alt="About us"/>
+                </Link>
+                <Link to="/projects"
+                      className="MainNavigationItem"
+                      onMouseOver={props.changeTitle('portfolio')}
+                      onMouseOut={props.changeTitle('equinox')} >
+                    <img src={illuminati} alt="Gallery"/>
+                </Link>
+                <Link to="/contacts"
+                      className="MainNavigationItem"
+                      onMouseOver={props.changeTitle('contacts')}
+                      onMouseOut={props.changeTitle('equinox')} >
+                    <img src={book} alt="Contacts"/>
+                </Link>
             </div>
             <Footer />
         </div>

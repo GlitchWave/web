@@ -16,7 +16,31 @@ class AppComponent extends React.Component {
     this.state = {
       displayedText: 'Equinox'
     }
+
+    //this.changeTitle = this.changeTitle.bind(this);
   }
+
+  /**
+   * @param {*} type is location where event was triggered
+   */
+  /*changeTitle(type) {
+    switch(type) {
+      case 'contacts':
+      this.setState({displayedText: 'Contact Info'});
+      break;
+      case 'info':
+      this.setState({displayedText: 'About Us'});
+      break;
+      case 'portfolio':
+      this.setState({displayedText: 'Our Projects'});
+      break;
+      case 'equinox':
+      this.setState({displayedText: 'Equinox'});
+      break;
+      default:
+      break;
+    }
+  }*/
 
   render() {
     return (
@@ -26,6 +50,7 @@ class AppComponent extends React.Component {
             <Main history={history}
                   displayedText={this.state.displayedText}
                   height={this.state.mainComponentHeight}
+                  changeTitle={this.changeTitle}
              />
           )} />
           <Route path='/contacts' exact render={({history}) => (
