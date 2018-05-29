@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Footer from '../Common/Footer';
-
 /**
  * Component to display information about contacts
  * Have no http layer
@@ -9,7 +7,6 @@ import Footer from '../Common/Footer';
 const Contacts = () => {
     return (
         <div className="Contacts" >
-            <Footer />
         </div>
     )
 }
