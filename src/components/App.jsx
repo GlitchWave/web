@@ -8,6 +8,9 @@ import { Switch, Route } from 'react-router-dom';
 import Main from './Main/Main';
 
 import StaticLinks from '../helpers/StaticLinks';
+import Header from './Common/Header/Header';
+import Footer from './Common/Footer/Footer';
+import AboutUs from './AboutUs/AboutUs';
 
 class AppComponent extends React.Component {
   constructor(props) {
@@ -22,11 +25,16 @@ class AppComponent extends React.Component {
   render() {
     return (
       <div className="wraper">
+        <Header />
         <Switch>
           <Route path='/' exact render={() => (
             <Main staticLinks={this.state.sourceOfStatic} />
           )} />
+          <Route path='/about' exact render={() => (
+            <AboutUs />
+          )} />
         </Switch>
+        <Footer />
       </div>
     );
   }

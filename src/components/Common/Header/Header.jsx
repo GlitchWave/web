@@ -1,11 +1,13 @@
 require('./Header.scss');
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => (
     <header>
         <div className="HeaderLinks" >
-            <p className="HeaderLinksItem">About Us</p>
+            <Link to='/' className="HeaderLinksItem">Main</Link>
+            <Link to='/about' className="HeaderLinksItem">About Us</Link>
             <p className="HeaderLinksItem">Technologies</p>
             <p className="HeaderLinksItem">Portfolio</p>
             <p className="HeaderLinksItem">Our Team</p>

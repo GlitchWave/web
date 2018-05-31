@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Founders from '../shared/components/Founders/Founders';
+import Carousel from '../Main/components/Carousel';
 
 /**
  * Component to display static info
@@ -8,8 +9,18 @@ import { Link } from 'react-router-dom';
  */
 const AboutUs = () => {
     return (
-        <div className="AboutUs" >
-        </div>
+        <section className="AboutUs" >
+            <div className="AboutUsBanner" >
+                Such cool text
+            </div>
+            <div className="AboutUsTextField" >
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel illum beatae a dicta, optio repellendus sit provident ipsum blanditiis quas!</p>
+            </div>
+            <Founders />
+            <Carousel type={'TEXT'}
+                      sourceObjects={[{text: 'kek'}, {text: 'lel'}]}
+                />
+        </section>
     )
 }
 
