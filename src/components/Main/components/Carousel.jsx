@@ -8,7 +8,7 @@ const Carousel = (props) => {
     if(props.type === 'IMAGES') {
         slidesToRender = props.sourceObjects.map((obj, i) => {
             return (
-                <Slide index={i} ><img src={obj.src}/></Slide>
+                <Slide index={i} key={i} ><img src={obj.src}/></Slide>
             );
         });
 
@@ -30,7 +30,7 @@ const Carousel = (props) => {
     } else if (props.type === 'TEXT') {
         slidesToRender = props.sourceObjects.map((obj, i) => {
             return (
-                <Slide index={i} >{obj.text}</Slide>
+                <Slide index={i} key={i} >{obj.text}</Slide>
             )
         });
         

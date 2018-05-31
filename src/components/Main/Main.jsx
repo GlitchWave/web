@@ -1,10 +1,11 @@
 require('./Main.scss');
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import Header from '../Common/Header/Header';
 import VideoBanner from './components/VideoBanner';
 import Carousel from './components/Carousel';
+import CommonForm from '../shared/components/CommonForm';
 
 /**
  * Main view with navigation
@@ -29,6 +30,7 @@ const Main = (props) => {
             </div>
             <Carousel type='TEXT'
                       sourceObjects={[{text: 'kek'}, {text: 'lel'}]} />
+            <CommonForm />
         </section>
     )
 }
