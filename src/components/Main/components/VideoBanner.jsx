@@ -1,3 +1,5 @@
+require('babel-polyfill');
+
 import React from 'react';
 import  VideoCover  from 'react-video-cover';
 
@@ -11,30 +13,37 @@ class VideoBanner extends React.Component {
                 height: '453.22px',
                 overflow: 'hidden'
             },
-            videoOptions: {
-                src: this.props.staticLinks.videoLink,
-                ref: videoRef => {
-                    this.videoRef = videoRef;
-                    this.setState({videoRef: videoRef});
-                  },
-                muted: true
-            }
+            videoOptions: undefined,
+            videoRef: undefined
         }
 
         this.startVideo = this.startVideo.bind(this);
         this.pauseVideo = this.pauseVideo.bind(this);
+        this.initPlayer = this.initPlayer.bind(this);
+    }
+
+    async initPlayer(func)  {
+        const videoOptions = {
+            src: this.props.staticLinks.videoLink,
+            ref: videoRef => {
+                this.setState({videoRef: videoRef});
+            },
+            muted: true
+        };
+        await this.setState({videoOptions: videoOptions});
+        func();
     }
 
     startVideo() {
-        this.videoRef.play();
+        this.state.videoRef.play();
     }
 
     pauseVideo() {
-        this.videoRef.pause();
+        this.state.videoRef.pause();
     }
 
     componentDidMount() {
-        this.startVideo();
+        this.initPlayer(this.startVideo);
     }
 
     componentWillUnmount() {
