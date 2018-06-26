@@ -1,0 +1,29 @@
+.Navigation {
+    width: 505px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NavigationItem {
+    width: 125px;
+    height: 30px;
+    border: solid 2px #0f999c;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Quicksand;
+    font-size: 14px;
+    font-weight: 100;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.NavActive {
+    background-color: #0f999c;
+}
