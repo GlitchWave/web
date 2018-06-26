@@ -25,6 +25,12 @@
     letter-spacing: normal;
     color: #ffffff;
     cursor: pointer;
+
+    transition: background-color ease-out .5s;
+}
+
+.HeaderButtonsItem:hover {
+    background-color: #0f999c;
 }
 
 .HeaderButtonsItemSecond {

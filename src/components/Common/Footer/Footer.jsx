@@ -4,8 +4,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer>
-            Footer
+        <footer className="Footer" >
+            <p>© 2018 Equinox team, with love. | All Rights Reserved </p>
         </footer>
     )
 }
