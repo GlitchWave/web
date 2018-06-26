@@ -47,11 +47,11 @@
         letter-spacing: normal;
         color: #c7c7c7;
         border-bottom: solid 0.8px rgba($color: #c7c7c7, $alpha: .66);
-        margin-bottom: 25px;
+        margin-bottom: 30px;
     }
 }
 
-textarea {
+.CommonFormTextArea {
     margin: 0;
     padding: 0;
     background-color: transparent;
@@ -66,4 +66,60 @@ textarea {
     line-height: normal;
     letter-spacing: normal;
     color: #c7c7c7;
+    margin-left: 26px;
+    width: calc(100% - 52px);
+    margin-bottom: 30px;
+}
+
+.CommonFormFooter {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+}
+
+.CommonFormFooterFirst {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 42px;
+
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 100;
+    font-style: normal;
+    color: #ffffff;
+
+    cursor: pointer;
+
+    img {
+        margin-right: 5px;
+    }
+}
+
+.CommonFormFooterButton {
+    width: 140px;
+    height: 35px;
+    border: solid 2px #0f999c;
+    font-family: Quicksand;
+    font-size: 15px;
+    font-weight: 100;
+    font-style: normal;
+    color: #ffffff;
+    cursor: pointer;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26px;
+
+    transition: background-color ease-out .5s;
+}
+
+.CommonFormFooterButton:hover {
+    background-color: #0f999c;
 }

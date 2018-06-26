@@ -15,10 +15,10 @@ const CommonForm = (props) => {
                     <input type="text" placeholder="Subject" />
                 </div>
             </div>
-            <textarea cols="30" rows="10" placeholder="Message" ></textarea>
+            <textarea cols="30" rows="10" placeholder="Message" className="CommonFormTextArea" ></textarea>
             <div className="CommonFormFooter" >
                 <div className="CommonFormFooterFirst" >
-                    <img src="#"/>
+                    <img src="https://image.ibb.co/dqhdN8/1_asset_1.png"/>
                     <span>Attach file</span>
                 </div>
                 <div className="CommonFormFooterButton" >
