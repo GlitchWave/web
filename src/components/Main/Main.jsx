@@ -2,10 +2,10 @@ require('./Main.scss');
 
 import React from 'react';
 //import { Link } from 'react-router-dom';
-import VideoBanner from './components/VideoBanner';
-import Carousel from './components/Carousel';
 import CommonForm from '../shared/components/CommonForm/CommonForm';
 import Founders from '../shared/components/Founders/Founders';
+import ImageBunner from './components/ImageBanner';
+import MainOurWorks from './components/OurWorksMain';
 
 /**
  * Main view with navigation
@@ -13,16 +13,17 @@ import Founders from '../shared/components/Founders/Founders';
 const Main = (props) => {
     return (
         <section className="Main" >
-            <VideoBanner staticLinks={props.staticLinks} />
+            <ImageBunner imageURL="https://image.ibb.co/bsnnN8/main_banner_03.png" />
             <Founders />
             <div className="MainFoundersTextField" >
                 <p className="MainFoundersTextFieldItem" >
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque illum eos ullam maiores, aut porro dolorem culpa magnam eveniet accusamus.
+                    {0}
                 </p>
             </div>
-            <Carousel type='TEXT'
-                      sourceObjects={[{text: 'kek'}, {text: 'lel'}]} />
-            <CommonForm />
+            <MainOurWorks />
+            <div className="MainContactSection">
+                <CommonForm />
+            </div>
         </section>
     )
 }

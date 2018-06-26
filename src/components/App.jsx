@@ -11,6 +11,7 @@ import StaticLinks from '../helpers/StaticLinks';
 import Header from './Common/Header/Header';
 import Footer from './Common/Footer/Footer';
 import AboutUs from './AboutUs/AboutUs';
+import Contacts from './Contacts/Contacts';
 
 class AppComponent extends React.Component {
   constructor(props) {
@@ -29,9 +30,6 @@ class AppComponent extends React.Component {
         <Switch>
           <Route path='/' exact render={() => (
             <Main staticLinks={this.state.sourceOfStatic} />
-          )} />
-          <Route path='/about' exact render={() => (
-            <AboutUs />
           )} />
         </Switch>
         <Footer />
