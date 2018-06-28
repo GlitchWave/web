@@ -10,9 +10,8 @@ import Main from './Main/Main';
 import StaticLinks from '../helpers/StaticLinks';
 import Header from './Common/Header/Header';
 import Footer from './Common/Footer/Footer';
-import AboutUs from './AboutUs/AboutUs';
-import Contacts from './Contacts/Contacts';
 import Portfolio from './Portfolio/Portfolio';
+import AboutUs from './AboutUs/AboutUs';
 
 class AppComponent extends React.Component {
   constructor(props) {
@@ -34,6 +33,9 @@ class AppComponent extends React.Component {
           )} />
           <Route path='/portfolio' exact render={() => (
             <Portfolio />
+          )} />
+          <Route path='/about-us' exact render={() => (
+            <AboutUs />
           )} />
         </Switch>
         <Footer />
