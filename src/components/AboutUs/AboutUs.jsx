@@ -4,6 +4,8 @@ import React from 'react';
 
 import Particles from 'react-particles-js';
 import { finalFirst, finalSecond, finalThird, finalFourth } from './config/config';
+import Founders from '../shared/components/Founders/Founders';
+import createMembers from './helpers/MembersCreator';
 
 /**
  * Component to display static info
@@ -37,6 +39,17 @@ const AboutUs = () => {
                 <p>To become part of Equinox team</p>
                 <Particles params={finalFourth} className="firstParticles" />
             </div>
+            <Founders />
+            <div className="AboutUsMembers" >
+                {createMembers([{url: '#', name: 'Ilya Kowalski', position: 'Developer'},
+                                {url: '#', name: 'Ilya Kowalski', position: 'Developer'},
+                                {url: '#', name: 'Ilya Kowalski', position: 'Developer'},
+                                {url: '#', name: 'Ilya Kowalski', position: 'Developer'},
+                                {url: '#', name: 'Ilya Kowalski', position: 'Developer'},
+                                {url: '#', name: 'Ilya Kowalski', position: 'Developer'}
+                               ])}
+            </div>
+            <div className="AboutUsContactUsButton" >CONTACT US</div>
         </section>
     )
 }

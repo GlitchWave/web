@@ -115,3 +115,37 @@
         margin: 20px 0 20px 0;
     }
 }
+
+.AboutUsMembers {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: calc(100% - 630px);
+}
+
+.AboutUsContactUsButton {
+    width: 145px;
+    height: 40px;
+    border: solid 2px #0f999c;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: Quicksand;
+    font-size: 14px;
+    font-weight: 100;
+    font-style: normal;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    margin-top: -40px;
+    margin-bottom: 15px;
+
+    transition: background ease-out .5s;
+}
+
+.AboutUsContactUsButton:hover {
+    cursor: pointer;
+    background-color: #0f999c;
+}
