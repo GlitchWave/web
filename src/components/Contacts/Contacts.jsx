@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Map from './components/Map';
+import Map from './components/Map/Map';
+import ContactForm from './components/ContactForm/ContactForm';
 
 /**
  * Component to display information about contacts
@@ -8,26 +9,32 @@ import Map from './components/Map';
  */
 const Contacts = () => (
     <section className="Contacts" >
-        <div className="ContactsBanner" >
-            Some wow text
+        <div className="ContactsFirstBlock" >
+            <h2>How you can contact our team?</h2>
+            <p>Just send us message via form below.</p>
+            <p>We will answer you as fast as light.</p>
+            <ContactForm />
         </div>
-        <div className="ContactsTextField" >
-            <p className="ContactsTextFieldItem" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis laudantium rem sequi alias magni neque nesciunt quasi consequatur quia doloribus.</p>
-        </div>
-        <div className="ContactsTextField" >
-            <p className="ContactsTextFieldItem" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis laudantium rem sequi alias magni neque nesciunt quasi consequatur quia doloribus.</p>
-        </div>
-        <div className="ContactsMapAndData" >
-            <Map googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyDxEpL5sMY3eFOZzIBBAh95aWWQqR9skas&v=3.exp&libraries=geometry,drawing,places'
-                 loadingElement={<div style={{height: '500px'}} ></div>}
-                 containerElement={<div style={{height: '500px', width: '1000px'}} ></div>}
-                 mapElement={<div style={{height: '500px'}} ></div>}
-                 isMarkerShown
-                  />
-            <div className="ContactsMapAndDataData" >
+        <div className="ContactsMapBlock" >
+            <div className="ContactsMapBlockAdress" >
+                <span>Country</span>
+                <span>City</span>
+                <span>Street</span>
+                <span>mem@kek.lol</span>
+                <span>+14(88)2286666</span>
+            </div>
+            <div className="ContactsMapBlockMapHolder" >
+                <p>Or you can meet us in person</p>
             </div>
         </div>
     </section>
 )
 
 export default Contacts;
+
+{/*<Map googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyDxEpL5sMY3eFOZzIBBAh95aWWQqR9skas&v=3.exp&libraries=geometry,drawing,places'
+                 loadingElement={<div style={{height: '500px'}} ></div>}
+                 containerElement={<div style={{height: '500px', width: '1000px'}} ></div>}
+                 mapElement={<div style={{height: '500px'}} ></div>}
+                 isMarkerShown
+                  />*/}
