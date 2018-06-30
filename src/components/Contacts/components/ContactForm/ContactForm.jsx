@@ -35,6 +35,21 @@ class ContactForm extends React.Component  {
                   this.setState({subjectValue: payload}) :
                   this.setState({error: Object.assign({}, this.state.error, {subjectValue: true})}));
                 break;
+            case 'email':
+                ((typeof payload === 'string') ?
+                  this.setState({emailValue: payload}) :
+                  this.setState({error: Object.assign({}, this.state.error, {emailValue: true})}));
+                break;
+            case 'phone':
+                ((typeof payload === 'string') ?
+                  this.setState({phoneValue: payload}) :
+                  this.setState({error: Object.assign({}, this.state.error, {phoneValue: true})}));
+                break;
+            case 'message':
+                this.setState({textMessageValue: payload});
+                break;
+            default:
+                break;
         }
     }
 
@@ -49,9 +64,20 @@ class ContactForm extends React.Component  {
                 <div className="ContactFormImage" >
                 </div>
                 <div className="ConctactFormFormInstance" >
-                    <input type="text" placeholder="Name" />
-                    <input type="text" placeholder="Subject" />
-                    <input type="email" placeholder="Email" />
+                    <input type="text"
+                           placeholder="Name"
+                           onInput={(event) => this.handleInputEvents('name', event.target.value)}
+                           value={this.state.nameValue}
+                     />
+                    <input type="text"
+                           placeholder="Subject"
+                           onInput={(event) => this.handleInputEvents('subject', event.target.value)}
+                           value={this.state.subjectValue}
+                     />
+                    <input type="email"
+                           placeholder="Email"
+                           
+                     />
                     <input type="tel" placeholder="Phone" />
                     <textarea name="" cols="30" rows="10" className="ConctactFormTextArea" ></textarea>
                 </div>
