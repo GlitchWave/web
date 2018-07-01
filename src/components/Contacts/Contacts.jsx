@@ -1,3 +1,4 @@
+require('./Contacts.scss');
 import React from 'react';
 
 import Map from './components/Map/Map';
@@ -9,7 +10,9 @@ import ContactForm from './components/ContactForm/ContactForm';
  */
 const Contacts = () => (
     <section className="Contacts" >
-        <div className="ContactsFirstBlock" >
+        <div className="ContactsFirstBlock"
+             style={{backgroundImage: `url(${'https://image.ibb.co/duAFey/banner_2.png'})`}}
+         >
             <h2>How you can contact our team?</h2>
             <p>Just send us message via form below.</p>
             <p>We will answer you as fast as light.</p>

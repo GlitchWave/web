@@ -1,7 +1,7 @@
 require('./ContactForm.scss');
 import React from 'react'
 
-class ContactForm extends React.Component  {
+class ContactForm extends React.PureComponent  {
     constructor(props) {
         super(props);
         
@@ -61,7 +61,10 @@ class ContactForm extends React.Component  {
     render() {
         return (
             <div className="ConctactForm" >
-                <div className="ContactFormImage" >
+                <div className="ConctactFormWraper" >
+                <div className="ContactFormImage"
+                     style={{backgroundImage: `url(${'https://image.ibb.co/cCGMKy/invalid_name.png'})`}}
+                 >
                 </div>
                 <div className="ConctactFormFormInstance" >
                     <input type="text"
@@ -76,14 +79,25 @@ class ContactForm extends React.Component  {
                      />
                     <input type="email"
                            placeholder="Email"
-                           
+                           onInput={(event) => this.handleInputEvents('email', event.target.value)}
+                           value={this.state.emailValue}
                      />
-                    <input type="tel" placeholder="Phone" />
-                    <textarea name="" cols="30" rows="10" className="ConctactFormTextArea" ></textarea>
+                    <input type="tel"
+                           placeholder="Phone"
+                           onInput={(event) => this.handleInputEvents('phone', event.target.value)}
+                           value={this.state.phoneValue}
+                     />
+                    <textarea cols="30"
+                              rows="10"
+                              className="ConctactFormTextArea"
+                              onInput={(event) => this.handleInputEvents('message', event.target.value)}
+                              value={this.state.textMessageValue}
+                     ></textarea>
+                </div>
                 </div>
                 <div className="ContactFormFooter" >
                     <div className="ContactFormFooterAttach" >
-                        <img src=""/>
+                        <img src={'https://image.ibb.co/dqhdN8/1_asset_1.png'}/>
                         <span>Attach files</span>
                     </div>
                     <div className="ContactFormFooterButton" onClick={() => this.sendMessage(this.state)} >SEND</div>
