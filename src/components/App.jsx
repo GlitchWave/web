@@ -14,6 +14,7 @@ import AboutUs from './AboutUs/AboutUs';
 import Contacts from './Contacts/Contacts';
 import StartProject from './StartProject/StartProject';
 import Technologies from './Technologies/Technologies';
+import Startup from './Startup/Startup';
 
 class AppComponent extends React.Component {
   constructor(props) {
@@ -47,6 +48,9 @@ class AppComponent extends React.Component {
           )} />
           <Route path='/technologies' exact render={() => (
             <Technologies />
+          )} />
+          <Route path='/startup' exact render={() => (
+            <Startup />
           )} />
         </Switch>
         <Footer />

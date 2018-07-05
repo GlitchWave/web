@@ -3,8 +3,8 @@ import React from 'react';
 
 const StartProject = () => {
     return (
-        <section>
-            
+        <section className="StartProject" >
+        
         </section>
     )
 }
