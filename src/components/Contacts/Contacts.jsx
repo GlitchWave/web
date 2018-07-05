@@ -1,8 +1,7 @@
 require('./Contacts.scss');
 import React from 'react';
-
-import Map from './components/Map/Map';
 import ContactForm from './components/ContactForm/ContactForm';
+import MapComponent from './components/Map/Map';
 
 /**
  * Component to display information about contacts
@@ -28,6 +27,9 @@ const Contacts = () => (
             </div>
             <div className="ContactsMapBlockMapHolder" >
                 <p>Or you can meet us in person</p>
+                <MapComponent isMarkerShown={true}
+                              googleMapURL={'https://maps.googleapis.com/maps/api/js?key=AIzaSyDxEpL5sMY3eFOZzIBBAh95aWWQqR9skas'}
+                 />
             </div>
         </div>
     </section>
