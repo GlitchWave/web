@@ -13,6 +13,7 @@ import Footer from './Common/Footer/Footer';
 import Portfolio from './Portfolio/Portfolio';
 import AboutUs from './AboutUs/AboutUs';
 import Contacts from './Contacts/Contacts';
+import StartProject from './StartProject/StartProject';
 
 class AppComponent extends React.Component {
   constructor(props) {
@@ -40,6 +41,9 @@ class AppComponent extends React.Component {
           )} />
           <Route path='/contacts' exact render={() => (
             <Contacts />
+          )} />
+          <Route path='/start-project' exact render={() => (
+            <StartProject />
           )} />
         </Switch>
         <Footer />

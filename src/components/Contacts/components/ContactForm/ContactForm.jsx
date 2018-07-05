@@ -22,7 +22,8 @@ class ContactForm extends React.PureComponent  {
             nameClass: '',
             subjectClass: '',
             emailClass: '',
-            phoneClass: ''
+            phoneClass: '',
+            fetchError: ''
         }
 
         this.handleInputEvents = this.handleInputEvents.bind(this);
@@ -87,9 +88,27 @@ class ContactForm extends React.PureComponent  {
                   };
             
             axios.post('https://safe-woodland-88615.herokuapp.com/form', JSON.stringify(bundle))
-                 .then(e => console.log(e))
-                 .catch(err => console.error(err));
+                 .catch(err => this.setState({fetchError: err}));
         }
+    }
+
+    componentWillUnmount() {
+        this.setState({error: {
+            name: false,
+            subject: false,
+            email: false,
+            phone: false
+        },
+        nameValue: '',
+        subjectValue: '',
+        emailValue: '',
+        phoneValue: '',
+        textMessageValue: '',
+        nameClass: '',
+        subjectClass: '',
+        emailClass: '',
+        phoneClass: '',
+        fetchError: false});
     }
 
     render() {

@@ -9,7 +9,7 @@ const Header = () => (
         <Link to='/portfolio' className="HeaderLinksItem">Portfolio</Link>
         <p className="HeaderLinksItem">Technologies</p>
         <Link to='/contacts' className="HeaderLinksItem">Contact Information</Link>
-        <div className="HeaderButtonsItem HeaderButtonsItemFirst">Start Project</div>
+        <Link to='/start-project' className="HeaderButtonsItem HeaderButtonsItemFirst">Start Project</Link>
         <div className="HeaderButtonsItem HeaderButtonsItemSecond">For Startups</div>
     </header>
 )
