@@ -1,6 +1,7 @@
 require('./ContactForm.scss');
 import React from 'react'
 import validator from 'validator';
+import axios from 'axios';
 
 class ContactForm extends React.PureComponent  {
     constructor(props) {
@@ -75,7 +76,20 @@ class ContactForm extends React.PureComponent  {
 
     sendMessage() {
         const { name, phone, email, subject } = this.checkAllFields('send');
-        if(!name && !phone && !email && !subject) console.log('kek');
+        if(!name && !phone && !email && !subject) {
+            const state = this.state,
+                  bundle = {
+                      name: state.nameValue,
+                      subject: state.subjectValue,
+                      email: state.emailValue,
+                      phone: state.phoneValue,
+                      textMessage: state.textMessageValue
+                  };
+            
+            axios.post('https://safe-woodland-88615.herokuapp.com/form', JSON.stringify(bundle))
+                 .then(e => console.log(e))
+                 .catch(err => console.error(err));
+        }
     }
 
     render() {
