@@ -5,9 +5,12 @@ const Startup = () => {
     return(
         <section className="Startup" >
             <div className="Startup_Banner"
-                 style={{}}
+                 style={{backgroundImage: `url(${'https://image.ibb.co/cmjuzy/startup_banner_bg.png'})`,
+                         backgroundSize: 'cover'
+                        }}
              >
              <h2>Let your dreams come true</h2>
+             <div className="Startup_Banner_Button">Let's do it!</div>
             </div>
             <div className="Startup_First_Text" >
                 <h2>We offer you</h2>

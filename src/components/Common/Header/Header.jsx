@@ -10,7 +10,7 @@ const Header = () => (
         <p className="HeaderLinksItem">Technologies</p>
         <Link to='/contacts' className="HeaderLinksItem">Contact Information</Link>
         <Link to='/start-project' className="HeaderButtonsItem HeaderButtonsItemFirst">Start Project</Link>
-        <div className="HeaderButtonsItem HeaderButtonsItemSecond">For Startups</div>
+        <Link to='/startup' className="HeaderButtonsItem HeaderButtonsItemSecond">For Startups</Link>
     </header>
 )
 
