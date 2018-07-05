@@ -6,7 +6,6 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Main from './Main/Main';
-
 import StaticLinks from '../helpers/StaticLinks';
 import Header from './Common/Header/Header';
 import Footer from './Common/Footer/Footer';
@@ -14,6 +13,7 @@ import Portfolio from './Portfolio/Portfolio';
 import AboutUs from './AboutUs/AboutUs';
 import Contacts from './Contacts/Contacts';
 import StartProject from './StartProject/StartProject';
+import Technologies from './Technologies/Technologies';
 
 class AppComponent extends React.Component {
   constructor(props) {
@@ -44,6 +44,9 @@ class AppComponent extends React.Component {
           )} />
           <Route path='/start-project' exact render={() => (
             <StartProject />
+          )} />
+          <Route path='/technologies' exact render={() => (
+            <Technologies />
           )} />
         </Switch>
         <Footer />
