@@ -52,3 +52,135 @@
 .Startup_Banner_Button:hover {
     background-color: #0f999c;
 }
+
+.Startup_First_Text {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    h2 {
+        margin: 0;
+        padding: 0;
+        font-family: Quicksand;
+        font-size: 34px;
+        font-weight: 100;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 25px;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+        max-width: 972px;
+        font-family: Quicksand;
+        font-size: 17px;
+        font-weight: 100;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        margin-top: 5px;
+    }
+}
+
+.Startup_Subtitle {
+    padding: 0;
+    margin: 0;
+    font-family: Quicksand;
+    font-size: 34px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-top: 45px;
+}
+
+.Startup_Schema {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+    width: 1250px;
+    height: 1006px;
+    margin-bottom: 100px;
+}
+
+.Startup_Schema_Item {
+    height: 100%;
+    width: 45%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.Startup_Schema_Item_Image {
+    margin-left: 130px;
+    margin-top: 70px;
+}
+
+.Startup_Schema_Item_Image:nth-child(1) {
+    margin-left: 100px;
+    margin-top: 0;
+}
+
+
+
+.Startup_Schema_Item_Subtitle {
+    font-family: Quicksand;
+    font-size: 22px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.Right_First {
+    margin-top: 118px;
+    margin-left: 55px;
+}
+
+.Startup_Schema_Item_UL {
+    font-family: Quicksand;
+    font-size: 14px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.First_UL {
+    margin-left: 72px;
+    margin-top: 40px;
+}
+
+.Right_Second {
+    margin-left: 55px;
+    margin-top: 150px;
+}
+
+.Second_UL {
+    margin-left: 72px;
+    margin-top: 40px;
+}
