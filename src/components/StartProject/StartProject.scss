@@ -1,0 +1,69 @@
+.start-project {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #000000;
+}
+
+.start-project--banner {
+  background-size: cover;
+  width: 80%;
+  height: 738px;
+  align-self: flex-end;
+  p {
+    font-family: Quicksand;
+    font-size: 36px;
+    font-weight: 100;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    margin-top: 556px;
+  }
+}
+
+.start-project--meeting,
+.start-project--spec,
+.start-project--ux,
+.start-project--development,
+.start-project--QA,
+.start-project--delivering,
+.start-project--support {
+  background-size: cover;
+  width: 80%;
+  height: 738px;
+  align-self: flex-end;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.typical--h3 {
+  font-family: Quicksand;
+  font-size: 36px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  margin-top: 363px;
+}
+
+.typical--p {
+  font-family: Quicksand;
+  font-size: 18px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-top: 24px;
+}

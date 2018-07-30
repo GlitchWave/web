@@ -22,8 +22,7 @@ class AppComponent extends React.Component {
 
     this.state = {
       sourceOfStatic: StaticLinks
-    }
-
+    };
   }
 
   render() {
@@ -31,27 +30,17 @@ class AppComponent extends React.Component {
       <div className="wraper">
         <Header />
         <Switch>
-          <Route path='/' exact render={() => (
-            <Main staticLinks={this.state.sourceOfStatic} />
-          )} />
-          <Route path='/portfolio' exact render={() => (
-            <Portfolio />
-          )} />
-          <Route path='/about-us' exact render={() => (
-            <AboutUs />
-          )} />
-          <Route path='/contacts' exact render={() => (
-            <Contacts />
-          )} />
-          <Route path='/start-project' exact render={() => (
-            <StartProject />
-          )} />
-          <Route path='/technologies' exact render={() => (
-            <Technologies />
-          )} />
-          <Route path='/startup' exact render={() => (
-            <Startup />
-          )} />
+          <Route
+            path="/"
+            exact
+            render={() => <Main staticLinks={this.state.sourceOfStatic} />}
+          />
+          <Route path="/portfolio" exact render={() => <Portfolio />} />
+          <Route path="/about-us" exact render={() => <AboutUs />} />
+          <Route path="/contacts" exact render={() => <Contacts />} />
+          <Route path="/start-project" exact render={() => <StartProject />} />
+          <Route path="/technologies" exact render={() => <Technologies />} />
+          <Route path="/startup" exact render={() => <Startup />} />
         </Switch>
         <Footer />
       </div>
@@ -59,7 +48,6 @@ class AppComponent extends React.Component {
   }
 }
 
-AppComponent.defaultProps = {
-};
+AppComponent.defaultProps = {};
 
 export default AppComponent;

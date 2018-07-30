@@ -1,10 +1,6 @@
 require('./Technologies.scss');
 import React from 'react';
 
-const Technologies = () => {
-    return (
-        <section></section>
-    )
-}
+const Technologies = () => <section />;
 
 export default Technologies;
