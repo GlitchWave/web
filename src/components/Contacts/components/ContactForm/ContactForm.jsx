@@ -2,6 +2,7 @@ require('./ContactForm.scss');
 import React from 'react';
 import validator from 'validator';
 import axios from 'axios';
+import { Parallax } from 'react-scroll-parallax';
 
 class ContactForm extends React.PureComponent {
   constructor(props) {
@@ -146,12 +147,21 @@ class ContactForm extends React.PureComponent {
     return (
       <div className="ConctactForm">
         <div className="ConctactFormWraper">
-          <div
+          {/*<div
             className="ContactFormImage"
             style={{
               backgroundImage: `url(${'https://image.ibb.co/cCGMKy/invalid_name.png'})`
             }}
-          />
+          />*/}
+          <Parallax
+            className="ContactFormImage"
+            offsetXMax={60}
+            offsetXMin={-10}
+            slowerScrollRate
+            tag="figure"
+          >
+            <img src="https://image.ibb.co/cCGMKy/invalid_name.png" />
+          </Parallax>
           <div className="ConctactFormFormInstance">
             <input
               type="text"

@@ -15,6 +15,7 @@ import Contacts from './Contacts/Contacts';
 import StartProject from './StartProject/StartProject';
 import Technologies from './Technologies/Technologies';
 import Startup from './Startup/Startup';
+import { ParallaxProvider } from '../../node_modules/react-scroll-parallax';
 
 class AppComponent extends React.Component {
   constructor(props) {
@@ -27,23 +28,29 @@ class AppComponent extends React.Component {
 
   render() {
     return (
-      <div className="wraper">
-        <Header />
-        <Switch>
-          <Route
-            path="/"
-            exact
-            render={() => <Main staticLinks={this.state.sourceOfStatic} />}
-          />
-          <Route path="/portfolio" exact render={() => <Portfolio />} />
-          <Route path="/about-us" exact render={() => <AboutUs />} />
-          <Route path="/contacts" exact render={() => <Contacts />} />
-          <Route path="/start-project" exact render={() => <StartProject />} />
-          <Route path="/technologies" exact render={() => <Technologies />} />
-          <Route path="/startup" exact render={() => <Startup />} />
-        </Switch>
-        <Footer />
-      </div>
+      <ParallaxProvider>
+        <div className="wraper">
+          <Header />
+          <Switch>
+            <Route
+              path="/"
+              exact
+              render={() => <Main staticLinks={this.state.sourceOfStatic} />}
+            />
+            <Route path="/portfolio" exact render={() => <Portfolio />} />
+            <Route path="/about-us" exact render={() => <AboutUs />} />
+            <Route path="/contacts" exact render={() => <Contacts />} />
+            <Route
+              path="/start-project"
+              exact
+              render={() => <StartProject />}
+            />
+            <Route path="/technologies" exact render={() => <Technologies />} />
+            <Route path="/startup" exact render={() => <Startup />} />
+          </Switch>
+          <Footer />
+        </div>
+      </ParallaxProvider>
     );
   }
 }
