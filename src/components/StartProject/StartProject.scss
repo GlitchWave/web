@@ -8,9 +8,13 @@
 
 .start-project--banner {
   background-size: cover;
-  width: 80%;
-  height: 738px;
+  width: 100%;
+  height: 768px;
   align-self: flex-end;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
   p {
     font-family: Quicksand;
     font-size: 36px;
@@ -33,8 +37,8 @@
 .start-project--delivering,
 .start-project--support {
   background-size: cover;
-  width: 80%;
-  height: 738px;
+  width: 100%;
+  height: 768px;
   align-self: flex-end;
   display: flex;
   flex-flow: column nowrap;
@@ -54,9 +58,11 @@
   margin: 0;
   padding: 0;
   margin-top: 363px;
+  margin-left: 174px;
 }
 
 .typical--p {
+  margin-left: 174px;
   font-family: Quicksand;
   font-size: 18px;
   font-weight: 100;
