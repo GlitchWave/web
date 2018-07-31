@@ -6,123 +6,79 @@ class Navigation extends React.PureComponent {
     super(props);
 
     this.state = {
-      spriteURL: 'https://image.ibb.co/jjDNoo/tech_Backs_Artboard_20.png',
       backgroundColor: '#0f999c',
-      web: '',
-      all: '',
-      mobile: '',
       bWeb: '',
       bAll: '',
       bMobile: ''
     };
 
-    this.clickHandler = this.clickHandler.bind(this);
-    this.toggleSprite = this.toggleSprite.bind(this);
+    this.toggleButton = this.toggleButton.bind(this);
   }
 
-  toggleSprite(type) {
-    switch (type) {
-      case 'web':
-        if (this.state.web.length === 0) {
-          this.setState(prevState => ({
-            web: prevState.spriteURL,
-            all: '',
-            mobile: ''
-          }));
-        } else {
-          this.setState({ web: '' });
-        }
-        break;
-      case 'all':
-        if (this.state.all.length === 0) {
-          this.setState(prevState => ({
-            all: prevState.spriteURL,
-            web: '',
-            mobile: ''
-          }));
-        } else {
-          this.setState({ all: '' });
-        }
-        break;
-      case 'mobile':
-        if (this.state.mobile.length === 0) {
-          this.setState(prevState => ({
-            mobile: prevState.spriteURL,
-            web: '',
-            all: ''
-          }));
-        } else {
-          this.setState({ mobile: '' });
-        }
-        break;
-      default:
-        break;
-    }
-  }
-
-  clickHandler(type) {
+  toggleButton(type) {
+    if (typeof type !== 'string') return;
     switch (type) {
       case 'web':
         this.setState(prevState => ({
           bWeb: prevState.backgroundColor,
-          bMobile: '',
-          bAll: ''
+          bAll: '',
+          bMobile: ''
         }));
         break;
       case 'all':
         this.setState(prevState => ({
           bAll: prevState.backgroundColor,
-          bMobile: '',
-          bWeb: ''
+          bWeb: '',
+          bMobile: ''
         }));
         break;
       case 'mobile':
         this.setState(prevState => ({
           bMobile: prevState.backgroundColor,
-          bWeb: '',
-          bAll: ''
+          bAll: '',
+          bWeb: ''
         }));
         break;
       default:
         break;
     }
   }
+
   render() {
     return (
       <div className="Navigation">
         <div
           className="NavigationItem"
-          style={{
-            backgroundImage: `url(${this.state.web})`
-          }}
-          onMouseOver={() => this.toggleSprite('web')}
-          onMouseOut={() => this.toggleSprite('web')}
-          onClick={() => this.clickHandler('web')}
+          onClick={() => this.toggleButton('web')}
         >
-          WEB
+          <div
+            className="InnerItem"
+            style={{ backgroundColor: this.state.bWeb }}
+          >
+            WEB
+          </div>
         </div>
         <div
           className="NavigationItem"
-          onMouseOver={() => this.toggleSprite('all')}
-          onMouseOut={() => this.toggleSprite('all')}
-          onClick={() => this.clickHandler('all')}
-          style={{
-            backgroundImage: `url(${this.state.all})`,
-            backgroundColor: this.state.bAll
-          }}
+          onClick={() => this.toggleButton('all')}
         >
-          ALL
+          <div
+            className="InnerItem"
+            style={{ backgroundColor: this.state.bAll }}
+          >
+            ALL
+          </div>
         </div>
         <div
           className="NavigationItem"
-          onMouseOver={() => this.toggleSprite('mobile')}
-          onMouseOut={() => this.toggleSprite('mobile')}
-          onClick={() => this.clickHandler('mobile')}
-          style={{
-            backgroundImage: `url(${this.state.mobile})`
-          }}
+          onClick={() => this.toggleButton('mobile')}
         >
-          MOBILE
+          <div
+            className="InnerItem"
+            style={{ backgroundColor: this.state.bMobile }}
+          >
+            MOBILE
+          </div>
         </div>
       </div>
     );

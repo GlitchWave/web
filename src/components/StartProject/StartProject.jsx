@@ -1,6 +1,6 @@
 require('./StartProject.scss');
 import React from 'react';
-import CostCalculator from './CostCalculator/CostCalculator';
+import CostCalculator from './components/CostCalculator/CostCalculator';
 import CommonForm from '../shared/components/CommonForm/CommonForm';
 
 const StartProject = () => {

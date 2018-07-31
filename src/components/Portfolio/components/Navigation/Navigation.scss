@@ -19,7 +19,25 @@
   font-weight: 100;
   color: #ffffff;
   cursor: pointer;
-  transition: background-image .3s ease-in, background-color .3s ease;
+  transition: all .3s ease;
+  position: relative;
+}
+
+.NavigationItem:hover {
+  background-image: url('https://image.ibb.co/jjDNoo/tech_Backs_Artboard_20.png');
+}
+
+.InnerItem {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  transition: all .3s ease;
+  position: relative;
+  z-index: 9999;
 }
 
 .NavActive {
