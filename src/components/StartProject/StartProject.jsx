@@ -18,7 +18,7 @@ const StartProject = () => {
       <div
         className="start-project--meeting"
         style={{
-          backgroundImage: 'url(https://image.ibb.co/dpPur8/meeting_banner.png)'
+          backgroundImage: 'url(https://image.ibb.co/k8WOve/meeting_banner.png)'
         }}
       >
         <h3 className="typical--h3">MEETING</h3>
@@ -36,7 +36,7 @@ const StartProject = () => {
         className="start-project--spec"
         style={{
           backgroundImage:
-            'url(https://image.ibb.co/iAbz8o/project_plan_banner.png)'
+            'url(https://image.ibb.co/mh2coz/project_plan_banner.png)'
         }}
       >
         <h3 className="typical--h3">SPECIFICATION AND ESTIMATE</h3>
@@ -53,7 +53,7 @@ const StartProject = () => {
       <div
         className="start-project--ux"
         style={{
-          backgroundImage: 'url(https://image.ibb.co/c5Kvr8/desing_banner.png)'
+          backgroundImage: 'url(https://image.ibb.co/eGJYTz/desing_banner.png)'
         }}
       >
         <h3 className="typical--h3">UX/UI DESIGN</h3>
@@ -71,7 +71,7 @@ const StartProject = () => {
         className="start-project--development"
         style={{
           backgroundImage:
-            'url(https://image.ibb.co/eXN6W8/developing_banner.png)'
+            'url(https://image.ibb.co/b3ovae/developing_banner.png)'
         }}
       >
         <h3 className="typical--h3">DEVELOPMENT</h3>
@@ -88,7 +88,7 @@ const StartProject = () => {
       <div
         className="start-project--QA"
         style={{
-          backgroundImage: 'url(https://image.ibb.co/fyrpjT/test_banner.png)'
+          backgroundImage: 'url(https://image.ibb.co/jcp7oz/test_banner.png)'
         }}
       >
         <h3 className="typical--h3">QA AND TESTING</h3>
@@ -105,7 +105,7 @@ const StartProject = () => {
       <div
         className="start-project--delivering"
         style={{
-          backgroundImage: 'url(https://image.ibb.co/nsTfr8/done_banner.png)'
+          backgroundImage: 'url(https://image.ibb.co/cbiQ8z/done_banner.png)'
         }}
       >
         <h3 className="typical--h3">DELIVERING</h3>
@@ -122,7 +122,7 @@ const StartProject = () => {
       <div
         className="start-project--support"
         style={{
-          backgroundImage: 'url(https://image.ibb.co/kfJc4T/support_banner.png)'
+          backgroundImage: 'url(https://image.ibb.co/mAtxMK/support_banner.png)'
         }}
       >
         <h3 className="typical--h3">SUPPORT</h3>
