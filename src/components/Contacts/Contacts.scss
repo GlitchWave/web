@@ -33,3 +33,40 @@
     color: #ffffff;
   }
 }
+
+.ContactsMapBlockAdress {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: Quicksand;
+  font-size: 18px;
+  font-weight: 100;
+  color: #ffffff;
+  margin-left: 127px;
+  margin-top: 200px;
+  span {
+    margin-bottom: 5px;
+  }
+}
+
+.ContactsMapBlock {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.ContactsMapBlockMapHolder {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 150px;
+  p {
+    font-family: Quicksand;
+    font-size: 18px;
+    font-weight: 100;
+    color: #ffffff;
+  }
+}
