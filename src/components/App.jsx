@@ -16,6 +16,7 @@ import StartProject from './StartProject/StartProject';
 import Technologies from './Technologies/Technologies';
 import Startup from './Startup/Startup';
 import { ParallaxProvider } from '../../node_modules/react-scroll-parallax';
+import ProjectPage from './ProjectPage/ProjectPage';
 
 class AppComponent extends React.Component {
   constructor(props) {
@@ -37,7 +38,11 @@ class AppComponent extends React.Component {
               exact
               render={() => <Main staticLinks={this.state.sourceOfStatic} />}
             />
-            <Route path="/portfolio" exact render={() => <Portfolio />} />
+            <Route
+              path="/portfolio"
+              exact
+              render={({ history }) => <Portfolio history={history} />}
+            />
             <Route path="/about-us" exact render={() => <AboutUs />} />
             <Route path="/contacts" exact render={() => <Contacts />} />
             <Route
@@ -47,6 +52,7 @@ class AppComponent extends React.Component {
             />
             <Route path="/technologies" exact render={() => <Technologies />} />
             <Route path="/startup" exact render={() => <Startup />} />
+            <Route path="/portfolio/:project" component={ProjectPage} />
           </Switch>
           <Footer />
         </div>

@@ -39,7 +39,7 @@ class Portfolio extends React.PureComponent {
           <Navigation />
         </div>
         <div className="PortfolioItemsHolder">
-          {PortfolioBuilder([1, 2, 3, 4])}
+          {PortfolioBuilder([1, 2, 3, 4], this.props.history)}
         </div>
       </section>
     );
