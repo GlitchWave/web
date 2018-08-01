@@ -1,5 +1,6 @@
 require('./OurWorksMain.scss');
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MainOurWorks = () => {
   return (
@@ -26,7 +27,7 @@ const MainOurWorks = () => {
             </p>
           </div>
         </div>
-        <div className="MainOurWorksOverviewLink">
+        <Link to="/portfolio" className="MainOurWorksOverviewLink">
           <div className="MainOurWorksOverviewLinkShadow" />
           <div
             className="MainOurWorksOverviewLinkArr"
@@ -38,7 +39,7 @@ const MainOurWorks = () => {
             <p>CHECK OUT</p>
             <p>GALLERY</p>
           </div>
-        </div>
+        </Link>
       </div>
     </section>
   );

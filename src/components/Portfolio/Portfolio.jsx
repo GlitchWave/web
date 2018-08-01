@@ -9,18 +9,41 @@ import PortfolioBuilder from './helpers/PortfolioBuilder';
  * Component to display projects of company
  * May have http layer
  */
-const Portfolio = () => {
+class Portfolio extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.scroll = this.scroll.bind(this);
+  }
+
+  scroll() {
+    window.scroll(0, 0);
+  }
+
+  componentDidMount() {
+    this.scroll();
+  }
+  render() {
     return (
-        <section className="Porfolio" >
-            <div className="PortfolioNavSection" style={{backgroundImage: `url(${'https://image.ibb.co/kdahzo/portfolio_top_paints_1366_x_756.png'})`}} >
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum voluptates ratione impedit, incidunt aspernatur adipisci fugiat accusamus natus perspiciatis reiciendis.</p>
-                <Navigation />
-            </div>
-            <div className="PortfolioItemsHolder" >
-                {PortfolioBuilder([1,2,3,4])}
-            </div>
-        </section>
-    )
+      <section className="Porfolio">
+        <div
+          className="PortfolioNavSection"
+          style={{
+            backgroundImage: `url(${'https://image.ibb.co/kdahzo/portfolio_top_paints_1366_x_756.png'})`
+          }}
+        >
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
+            voluptates ratione impedit, incidunt aspernatur adipisci fugiat
+            accusamus natus perspiciatis reiciendis.
+          </p>
+          <Navigation />
+        </div>
+        <div className="PortfolioItemsHolder">
+          {PortfolioBuilder([1, 2, 3, 4])}
+        </div>
+      </section>
+    );
+  }
 }
 
 export default Portfolio;
