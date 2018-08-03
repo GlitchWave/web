@@ -17,13 +17,15 @@ import Technologies from './Technologies/Technologies';
 import Startup from './Startup/Startup';
 import { ParallaxProvider } from '../../node_modules/react-scroll-parallax';
 import ProjectPage from './ProjectPage/ProjectPage';
+import SEO_SERVICE from '../helpers/Services/SEO_SERVICE';
 
 class AppComponent extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      sourceOfStatic: StaticLinks
+      sourceOfStatic: StaticLinks,
+      SEO: SEO_SERVICE
     };
   }
 
@@ -36,7 +38,12 @@ class AppComponent extends React.Component {
             <Route
               path="/"
               exact
-              render={() => <Main staticLinks={this.state.sourceOfStatic} />}
+              render={() => (
+                <Main
+                  staticLinks={this.state.sourceOfStatic}
+                  seo={this.state.SEO.main}
+                />
+              )}
             />
             <Route
               path="/portfolio"

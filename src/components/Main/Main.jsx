@@ -1,18 +1,24 @@
 require('./Main.scss');
 
 import React from 'react';
-//import { Link } from 'react-router-dom';
 import CommonForm from '../shared/components/CommonForm/CommonForm';
 import Founders from '../shared/components/Founders/Founders';
 import ImageBunner from './components/ImageBanner';
 import MainOurWorks from './components/OurWorksMain';
+import { Helmet } from 'react-helmet';
 
 /**
  * Main view with navigation
  */
-const Main = () => {
+const Main = ({ seo }) => {
   return (
     <section className="Main">
+      <Helmet>
+        <title>Equinox Corp</title>
+        <meta name="author" content="Equinox Company" />
+        <meta name="description" content={seo.description} />
+        <meta name="keywords" content={seo.keywords} />
+      </Helmet>
       <ImageBunner imageURL="https://image.ibb.co/bsnnN8/main_banner_03.png" />
       <Founders />
       <div className="MainFoundersTextField">
