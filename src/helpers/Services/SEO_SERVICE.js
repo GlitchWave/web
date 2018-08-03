@@ -12,4 +12,8 @@ const SEO_SERVICE = (routes) => {
 }
 
 export default SEO_SERVICE([{name: 'main', description: 'lel', keywords: ['Web', 'Good', 'Butterknife']},
-                            {name: 'portfolio', description: 'some description', keywords: ['site', 'web', 'service', 'good']}]);
+                            {name: 'portfolio', description: 'some description', keywords: ['site', 'web', 'service', 'good']},
+                            {name: 'aboutus', description: 'some default', keywords: ['site', 'web', 'new']},
+                            {name: 'contacts', description: 'default desc', keywords: ['some', 'key', 'words']},
+                            {name: 'start', description: 'some def', keywords: ['some', 'shit', 'you know']},
+                            {name: 'startup', description: 'jkefjl lkfl', keywords: ['some', 'def', 'shit']}]);

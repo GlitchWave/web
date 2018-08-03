@@ -11,15 +11,22 @@ import {
 } from './config/config';
 import Founders from '../shared/components/Founders/Founders';
 import createMembers from './helpers/MembersCreator';
+import { Helmet } from 'react-helmet';
 
 /**
  * Component to display static info
  * No http layer
  * http://i.piccy.info/i9/73692f20ade969d15abfec6e5a00be8f/1524557535/142319/1239415/background_copy.jpg
  */
-const AboutUs = () => {
+const AboutUs = ({ seo }) => {
   return (
     <section className="AboutUs">
+      <Helmet>
+        <title>About Equinox</title>
+        <meta name="author" content="Equinox Company" />
+        <meta name="description" content={seo.description} />
+        <meta name="keywords" content={seo.keywords} />
+      </Helmet>
       <div
         className="AboutUsFirstSection"
         style={{

@@ -1,10 +1,17 @@
 require('./Startup.scss');
 import React from 'react';
 import MainOurWorks from '../Main/components/OurWorksMain';
+import { Helmet } from 'react-helmet';
 
-const Startup = () => {
+const Startup = ({ seo }) => {
   return (
     <section className="Startup">
+      <Helmet>
+        <title>Startup Equinox</title>
+        <meta name="author" content="Equinox Company" />
+        <meta name="description" content={seo.description} />
+        <meta name="keywords" content={seo.keywords} />
+      </Helmet>
       <div
         className="Startup_Banner"
         style={{

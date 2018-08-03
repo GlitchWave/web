@@ -2,13 +2,20 @@ require('./Contacts.scss');
 import React from 'react';
 import ContactForm from './components/ContactForm/ContactForm';
 import MapComponent from './components/Map/Map';
+import { Helmet } from 'react-helmet';
 
 /**
  * Component to display information about contacts
  * Have no http layer
  */
-const Contacts = () => (
+const Contacts = ({ seo }) => (
   <section className="Contacts">
+    <Helmet>
+      <title>Contact Equinox</title>
+      <meta name="author" content="Equinox Company" />
+      <meta name="description" content={seo.description} />
+      <meta name="keywords" content={seo.keywords} />
+    </Helmet>
     <div
       className="ContactsFirstBlock"
       style={{

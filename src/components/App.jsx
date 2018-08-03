@@ -52,15 +52,27 @@ class AppComponent extends React.Component {
                 <Portfolio history={history} seo={this.state.SEO.portfolio} />
               )}
             />
-            <Route path="/about-us" exact render={() => <AboutUs />} />
-            <Route path="/contacts" exact render={() => <Contacts />} />
+            <Route
+              path="/about-us"
+              exact
+              render={() => <AboutUs seo={this.state.SEO.aboutus} />}
+            />
+            <Route
+              path="/contacts"
+              exact
+              render={() => <Contacts seo={this.state.SEO.contacts} />}
+            />
             <Route
               path="/start-project"
               exact
-              render={() => <StartProject />}
+              render={() => <StartProject seo={this.state.SEO.start} />}
             />
             <Route path="/technologies" exact render={() => <Technologies />} />
-            <Route path="/startup" exact render={() => <Startup />} />
+            <Route
+              path="/startup"
+              exact
+              render={() => <Startup seo={this.state.SEO.startup} />}
+            />
             <Route path="/portfolio/:project" component={ProjectPage} />
           </Switch>
           <Footer />

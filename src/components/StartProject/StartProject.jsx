@@ -2,10 +2,17 @@ require('./StartProject.scss');
 import React from 'react';
 import CostCalculator from './components/CostCalculator/CostCalculator';
 import CommonForm from '../shared/components/CommonForm/CommonForm';
+import { Helmet } from 'react-helmet';
 
-const StartProject = () => {
+const StartProject = ({ seo }) => {
   return (
     <section className="start-project">
+      <Helmet>
+        <title>Start Project</title>
+        <meta name="author" content="Equinox Company" />
+        <meta name="description" content={seo.description} />
+        <meta name="keywords" content={seo.keywords} />
+      </Helmet>
       <div
         className="start-project--banner"
         style={{
