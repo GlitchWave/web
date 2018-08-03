@@ -11,4 +11,5 @@ const SEO_SERVICE = (routes) => {
     return seo_config;
 }
 
-export default SEO_SERVICE([{name: 'main', description: 'lel', keywords: ['Web', 'Good', 'Butterknife']}]);
+export default SEO_SERVICE([{name: 'main', description: 'lel', keywords: ['Web', 'Good', 'Butterknife']},
+                            {name: 'portfolio', description: 'some description', keywords: ['site', 'web', 'service', 'good']}]);

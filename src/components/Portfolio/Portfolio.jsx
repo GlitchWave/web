@@ -2,8 +2,8 @@ require('./Portfolio.scss');
 
 import React from 'react';
 import Navigation from './components/Navigation/Navigation';
-
 import PortfolioBuilder from './helpers/PortfolioBuilder';
+import { Helmet } from 'react-helmet';
 
 /**
  * Component to display projects of company
@@ -23,8 +23,15 @@ class Portfolio extends React.PureComponent {
     this.scroll();
   }
   render() {
+    const { seo } = this.props;
     return (
       <section className="Porfolio">
+        <Helmet>
+          <title>Equinox Portfolio</title>
+          <meta name="author" content="Equinox Company" />
+          <meta name="description" content={seo.description} />
+          <meta name="keywords" content={seo.keywords} />
+        </Helmet>
         <div
           className="PortfolioNavSection"
           style={{
