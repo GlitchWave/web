@@ -18,6 +18,7 @@ import Startup from './Startup/Startup';
 import { ParallaxProvider } from '../../node_modules/react-scroll-parallax';
 import ProjectPage from './ProjectPage/ProjectPage';
 import SEO_SERVICE from '../helpers/Services/SEO_SERVICE';
+import NotFound from './NotFound/NotFound';
 
 class AppComponent extends React.Component {
   constructor(props) {
@@ -74,6 +75,10 @@ class AppComponent extends React.Component {
               render={() => <Startup seo={this.state.SEO.startup} />}
             />
             <Route path="/portfolio/:project" component={ProjectPage} />
+            <Route
+              path="/*"
+              render={() => <NotFound seo={this.state.SEO.notfound} />}
+            />
           </Switch>
           <Footer />
         </div>

@@ -16,4 +16,5 @@ export default SEO_SERVICE([{name: 'main', description: 'lel', keywords: ['Web',
                             {name: 'aboutus', description: 'some default', keywords: ['site', 'web', 'new']},
                             {name: 'contacts', description: 'default desc', keywords: ['some', 'key', 'words']},
                             {name: 'start', description: 'some def', keywords: ['some', 'shit', 'you know']},
-                            {name: 'startup', description: 'jkefjl lkfl', keywords: ['some', 'def', 'shit']}]);
+                            {name: 'startup', description: 'jkefjl lkfl', keywords: ['some', 'def', 'shit']},
+                            {name: 'notfound', description: 'not that page', keywords: ['soem', 'sjot', 'jfkds']}]);
