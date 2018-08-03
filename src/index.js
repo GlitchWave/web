@@ -3,6 +3,7 @@ import 'core-js/fn/object/assign';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+//import { getAllProjects, getTopProjects } from './helpers/Services/httpService';
 
 import App from './components/App';
 
