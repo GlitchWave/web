@@ -1,3 +1,114 @@
+.project-page {
+  background-color: #000000;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.project-page__banner {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .project-page__banner__pc {
+  margin: 0;
+  padding: 0;
   background-size: cover;
+  width: 800px;
+  height: 700px;
+  background-image: url('https://image.ibb.co/hLT3WK/Untitled_2_imac2013_front.png');
+  margin-left: 50px;
+  div {
+    width: 674px;
+    height: 382px;
+    margin-top: 123px;
+    margin-left: 65px;
+    background-size: cover;
+  }
+}
+
+.project-page__banner__text-field {
+  width: calc(100% - 800px);
+  h3 {
+    font-family: Quicksand;
+    font-size: 24px;
+    font-weight: 1000;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-top: 185px;
+  }
+  p {
+    font-family: Quicksand;
+    font-size: 18px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    width: 95%;
+    margin-top: 25px;
+  }
+  .project-page__banner__text-field__button {
+    width: 166px;
+    height: 30px;
+    border: solid 2px #0f999c;
+    font-family: Quicksand;
+    font-size: 13px;
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-top: 71px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+    margin-left: 350px;
+  }
+  .project-page__banner__text-field__button:hover {
+    cursor: pointer;
+    background-color: #0f999c;
+  }
+}
+
+.project-page__technologies {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  h3 {
+    font-family: Quicksand;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    position: relative;
+    top: -150px;
+  }
+}
+
+.project-page__technologies__sprite {
+  background-size: cover;
+  width: 648px;
+  height: 331px;
 }

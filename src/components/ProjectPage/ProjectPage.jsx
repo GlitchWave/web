@@ -12,13 +12,9 @@ class ProjectPage extends React.PureComponent {
     return (
       <section className="project-page">
         <div className="project-page__banner">
-          <div
-            className="project-page__banner__pc"
-            style={{
-              backgroundImage:
-                'url(https://image.ibb.co/hLT3WK/Untitled_2_imac2013_front.png)'
-            }}
-          />
+          <div className="project-page__banner__pc">
+            <div />
+          </div>
           <div className="project-page__banner__text-field">
             <h3>Project Name</h3>
             <p>
@@ -32,7 +28,12 @@ class ProjectPage extends React.PureComponent {
           </div>
         </div>
         <div className="project-page__technologies">
-          <div className="project-page__technologies__sprite" />
+          <div
+            className="project-page__technologies__sprite"
+            style={{
+              backgroundImage: 'url(https://image.ibb.co/esCt5e/untitled_5.png)'
+            }}
+          />
           <h3>TECHNOLOGIES WE USED ON THIS PROJET</h3>
           <TechnologiesList
             types={['frontend', 'backend']}
