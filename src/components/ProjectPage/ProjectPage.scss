@@ -112,3 +112,53 @@
   width: 648px;
   height: 331px;
 }
+
+.technologies-list {
+  align-self: center;
+  color: red;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.technologies-list__block {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 90px;
+}
+
+.technologies-list__block__label {
+  width: 183px;
+  height: 90px;
+  background-size: cover;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://image.ibb.co/esCt5e/untitled_5.png');
+  font-family: Quicksand;
+  font-size: 24px;
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.technologies-list__block__list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  span {
+    margin-left: 10px;
+    font-family: Quicksand;
+    font-size: 14px;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+}
