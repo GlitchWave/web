@@ -1,7 +1,6 @@
 require('./ContactForm.scss');
 import React from 'react';
 import validator from 'validator';
-import axios from 'axios';
 import { Parallax } from 'react-scroll-parallax';
 
 class ContactForm extends React.PureComponent {
@@ -104,21 +103,26 @@ class ContactForm extends React.PureComponent {
   sendMessage() {
     const { name, phone, email, subject } = this.checkAllFields('send');
     if (!name && !phone && !email && !subject) {
-      const state = this.state,
-        bundle = {
-          name: state.nameValue,
-          subject: state.subjectValue,
-          email: state.emailValue,
-          phone: state.phoneValue,
-          textMessage: state.textMessageValue
-        };
+      const {
+        nameValue,
+        subjectValue,
+        emailValue,
+        phoneValue,
+        textMessageValue
+      } = this.state;
 
-      axios
-        .post(
-          'https://safe-woodland-88615.herokuapp.com/form',
-          JSON.stringify(bundle)
-        )
-        .catch(err => this.setState({ fetchError: err }));
+      let bundle = {
+        name: nameValue,
+        email: emailValue,
+        phone: phoneValue,
+        subject: subjectValue,
+        message: textMessageValue
+      };
+
+      fetch('https://calm-sands-82801.herokuapp.com/form', {
+        method: 'POST',
+        body: JSON.stringify(bundle)
+      }).catch(err => this.setState({ fetchError: err }));
     }
   }
 
@@ -147,12 +151,6 @@ class ContactForm extends React.PureComponent {
     return (
       <div className="ConctactForm">
         <div className="ConctactFormWraper">
-          {/*<div
-            className="ContactFormImage"
-            style={{
-              backgroundImage: `url(${'https://image.ibb.co/cCGMKy/invalid_name.png'})`
-            }}
-          />*/}
           <Parallax
             className="ContactFormImage"
             offsetXMax={60}
