@@ -2,6 +2,7 @@ require('./Startup.scss');
 import React from 'react';
 import MainOurWorks from '../Main/components/OurWorksMain';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const Startup = ({ seo }) => {
   return (
@@ -20,7 +21,9 @@ const Startup = ({ seo }) => {
         }}
       >
         <h2>Let your dreams come true</h2>
-        <div className="Startup_Banner_Button">Let's do it!</div>
+        <Link to="/contacts" className="Startup_Banner_Button">
+          Let's do it!
+        </Link>
       </div>
       <div className="Startup_First_Text">
         <h2>We offer you</h2>

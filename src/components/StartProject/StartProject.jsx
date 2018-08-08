@@ -129,7 +129,9 @@ const StartProject = ({ seo }) => {
       <div
         className="start-project--support"
         style={{
-          backgroundImage: 'url(https://image.ibb.co/mAtxMK/support_banner.png)'
+          backgroundImage:
+            'url(https://image.ibb.co/mAtxMK/support_banner.png)',
+          marginBottom: '50px'
         }}
       >
         <h3 className="typical--h3">SUPPORT</h3>
