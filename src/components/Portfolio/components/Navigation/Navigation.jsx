@@ -19,6 +19,7 @@ class Navigation extends React.PureComponent {
     if (typeof type !== 'string') return;
     switch (type) {
       case 'web':
+        this.props.changeFilter('web', this.props.filter);
         this.setState(prevState => ({
           bWeb: prevState.backgroundColor,
           bAll: '',
@@ -26,6 +27,7 @@ class Navigation extends React.PureComponent {
         }));
         break;
       case 'all':
+        this.props.changeFilter('all', this.props.filter);
         this.setState(prevState => ({
           bAll: prevState.backgroundColor,
           bWeb: '',
@@ -33,6 +35,7 @@ class Navigation extends React.PureComponent {
         }));
         break;
       case 'mobile':
+        this.props.changeFilter('mobile', this.props.filter);
         this.setState(prevState => ({
           bMobile: prevState.backgroundColor,
           bAll: '',
@@ -42,6 +45,10 @@ class Navigation extends React.PureComponent {
       default:
         break;
     }
+  }
+
+  componentDidMount() {
+    this.setState(prevState => ({ bAll: prevState.backgroundColor }));
   }
 
   render() {

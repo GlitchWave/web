@@ -28,11 +28,11 @@ const Startup = ({ seo }) => {
       <div className="Startup_First_Text">
         <h2>We offer you</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-          nostrum! Nobis ad commodi labore autem reiciendis illo perspiciatis
-          accusantium ducimus amet quaerat ullam facere necessitatibus voluptate
-          sapiente dolores sit laborum incidunt neque, voluptatem, quidem atque,
-          eveniet eum? Veritatis, quo numquam!
+          Our team has huge experience in working with startups. We develop
+          startup from scratch, create MVP and the corresponding product.
+          Besides that, Equinox has a team of business analytics who will take
+          care of your product, build the optimal strategy for its development
+          and promotion and consult your startup thereafter.
         </p>
       </div>
       <h3 className="Startup_Subtitle">How it works</h3>
@@ -59,12 +59,9 @@ const Startup = ({ seo }) => {
             Planning & Preparation
           </p>
           <ul className="Startup_Schema_Item_UL First_UL">
-            <li>Defining goal</li>
-            <li>Lorem ipsum dolor sit amet consectetur.</li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Molestias.
-            </li>
+            <li>Defining goals</li>
+            <li>User interface and user experience design</li>
+            <li>Discussion and improvement of the results with a client</li>
           </ul>
           <img
             src={'https://image.ibb.co/fT239y/body_development_img.png'}
@@ -75,26 +72,23 @@ const Startup = ({ seo }) => {
             Finalizing
           </p>
           <ul className="Startup_Schema_Item_UL Second_UL">
-            <li>Defining goal</li>
-            <li>Lorem ipsum dolor sit amet consectetur.</li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Molestias.
-            </li>
-            <li>Q/A</li>
-            <li>Other shit shit shit</li>
+            <li>Frontend and backend development continued</li>
+            <li>QA the application</li>
+            <li>Project demo</li>
+            <li>60% final payment</li>
+            <li>Application production deployment</li>
           </ul>
         </div>
         <div className="Startup_Schema_Item">
           <p className="Startup_Schema_Item_Subtitle Left_First">Get to know</p>
           <ul className="Startup_Schema_Item_UL Left_First_UL">
-            <li>Video Meeting</li>
-            <li>Lorem ipsum dolor sit amet consectetur.</li>
+            <li>Video Meeting (Company and service introduction)</li>
+            <li> Signing NDA & defining the project needs</li>
+            <li>Agreement, (40% deposit payment)</li>
             <li>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Molestias.
+              Project setting up (clarifying assumptions and prioritizing
+              features)
             </li>
-            <li>Lorem ipsum dolor sit amet consectetur.</li>
           </ul>
           <div
             className="clock-holder"
@@ -111,13 +105,9 @@ const Startup = ({ seo }) => {
             Development
           </p>
           <ul className="Startup_Schema_Item_UL Left_First_UL">
-            <li>Video Meeting</li>
-            <li>Lorem ipsum dolor sit amet consectetur.</li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Molestias.
-            </li>
-            <li>Lorem ipsum dolor sit amet consectetur.</li>
+            <li>Setting up development process</li>
+            <li>Preparing development environment</li>
+            <li>Frontend and Backend development</li>
           </ul>
           <img
             src={'https://image.ibb.co/idkgUT/commet.png'}

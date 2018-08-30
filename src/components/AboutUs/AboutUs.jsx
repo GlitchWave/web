@@ -9,9 +9,9 @@ import {
   finalThird,
   finalFourth
 } from './config/config';
-import Founders from '../shared/components/Founders/Founders';
 import createMembers from './helpers/MembersCreator';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 /**
  * Component to display static info
@@ -36,14 +36,15 @@ const AboutUs = ({ seo }) => {
         <h1>DREAMS</h1>
         <h2>can't do what we can</h2>
         <p className="AboutUsFirstSectionText">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus minima
-          reiciendis fugiat facere praesentium commodi non corrupti deserunt!
-          Ullam magnam id quisquam adipisci earum autem sequi aliquam odio ipsam
-          fugiat quaerat nam rem, repudiandae sit officiis explicabo dicta quo
-          odit quidem animi maxime. Quaerat illum consequuntur quisquam officiis
-          ab facilis est, quasi earum voluptate tempore sint. Sit, vero et,
-          sequi aliquam perspiciatis aut cumque consectetur, similique adipisci
-          consequuntur eos molestiae delectus quas doloremque vitae nobis.
+          Equinox is a company of ambitious technology professionals. Our main
+          idea is really simple - to help smart people, entrepreneurs and
+          companies with technology aspects of their projects. We give them the
+          opportunity to focus on the business while we do what we do best -
+          amazing software development. We are a people oriented company. We
+          believe that the only way to achieve outstanding results is to do the
+          right things with the right people. The manifesto of our company
+          contains principles such as trust, transparency, team spirit, quality,
+          sense of beauty, health and social responsibility.
         </p>
         <p className="AboutUsFirstSectionSubTitle">
           Who is working on your project?
@@ -52,7 +53,7 @@ const AboutUs = ({ seo }) => {
           Our developers are carefully selected so you work only with the best
         </p>
         <p className="AboutUsFirstSectionSubTextSecond">
-          First, a variety of developers come in Equinox
+          First, a variety of developers come to Equinox
         </p>
       </div>
       <div className="AboutUsSecondSection">
@@ -64,25 +65,65 @@ const AboutUs = ({ seo }) => {
                 <p>To become part of Equinox team</p>
     <img src="https://image.ibb.co/ik1y9o/path_4.png"/>*/}
         <Particles params={finalFirst} className="firstParticles" />
-        <p>Some of them pass our live interviews and English test</p>
+        <p>Some of them pass our live interview and English test</p>
         <Particles params={finalSecond} className="firstParticles" />
         <p>Then they need to pass out code quality test</p>
         <Particles params={finalThird} className="firstParticles" />
         <p>To become part of Equinox team</p>
         <Particles params={finalFourth} className="firstParticles" />
       </div>
-      <Founders />
       <div className="AboutUsMembers">
         {createMembers([
-          { url: '#', name: 'Ilya Kowalski', position: 'Developer' },
-          { url: '#', name: 'Ilya Kowalski', position: 'Developer' },
-          { url: '#', name: 'Ilya Kowalski', position: 'Developer' },
-          { url: '#', name: 'Ilya Kowalski', position: 'Developer' },
-          { url: '#', name: 'Ilya Kowalski', position: 'Developer' },
-          { url: '#', name: 'Ilya Kowalski', position: 'Developer' }
+          {
+            url: '#',
+            name: 'Vladislav Gorovoy',
+            position: 'CTO / Fullstack developer'
+          },
+          {
+            url: '#',
+            name: 'Artem Chernenkiy',
+            position: 'Lead IOS developer'
+          },
+          {
+            url: '#',
+            name: 'Andrew Vakuliuk',
+            position: 'Fullstack web developer'
+          },
+          {
+            url: '#',
+            name: 'Oleh Diordiychuk',
+            position: 'Fullstack web developer'
+          },
+          {
+            url: '#',
+            name: 'Lidiya Ivanova',
+            position: 'Lead Android developer'
+          },
+          {
+            url: '#',
+            name: 'Anatoliy Bernatovich',
+            position: '.Net core developer'
+          },
+          {
+            url: '#',
+            name: 'Nikolay Meretskyi',
+            position: 'Data scientist / Python dev'
+          },
+          {
+            url: '#',
+            name: 'Kostiantyn Davydov',
+            position: 'Frontend developer'
+          },
+          {
+            url: '#',
+            name: 'Maxim Prihodko',
+            position: 'Designer / 3d modeling'
+          }
         ])}
       </div>
-      <div className="AboutUsContactUsButton">CONTACT US</div>
+      <Link to="/contacts" className="AboutUsContactUsButton">
+        CONTACT US
+      </Link>
     </section>
   );
 };

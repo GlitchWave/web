@@ -12,7 +12,7 @@ a {
 
 .MainFoundersTextField {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   width: 60%;
@@ -22,6 +22,7 @@ a {
   padding-right: 20%;
   padding-top: 33px;
   padding-bottom: 49px;
+
   .MainFoundersTextFieldItem {
     padding: 0;
     margin: 0;
@@ -33,6 +34,10 @@ a {
     line-height: normal;
     letter-spacing: normal;
     color: #ffffff;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
   }
 }
 

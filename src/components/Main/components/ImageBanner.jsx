@@ -31,8 +31,8 @@ const ImageBunner = () => {
       ]}
       style={{ height: '768px' }}
     >
-      <p style={textStyle}>Lorem ipsum amet.</p>
-      <p style={textStyle}>Lorem ipsum dolor sit amet.</p>
+      <p style={textStyle}>Your brilliant ideas in perfect balance</p>
+      <p style={textStyle}>with our experience.</p>
     </ParallaxBanner>
   );
 };

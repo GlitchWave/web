@@ -22,7 +22,20 @@ const Main = ({ seo }) => {
       <ImageBunner imageURL="https://image.ibb.co/bsnnN8/main_banner_03.png" />
       <Founders />
       <div className="MainFoundersTextField">
-        <p className="MainFoundersTextFieldItem">{0}</p>
+        <p className="MainFoundersTextFieldItem">
+          Michael Sukhorukov - SEO and the founder of Equinox.
+        </p>
+        <p
+          className="MainFoundersTextFieldItem"
+          style={{ width: '60%', marginLeft: '30px', marginRight: '30px' }}
+        >
+          Artem Chernenkyy - professional iOS developer and team lead of mobile
+          development team of Equinox. He creates and manages teams for mobile
+          applications implementation.
+        </p>
+        <p className="MainFoundersTextFieldItem">
+          Vladislav Gorovoy - CTO and founder of Equinox.
+        </p>
       </div>
       <MainOurWorks />
       <div className="MainContactSection">
