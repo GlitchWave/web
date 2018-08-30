@@ -4,6 +4,7 @@ import React from 'react';
 import Navigation from './components/Navigation/Navigation';
 import PortfolioBuilder from './helpers/PortfolioBuilder';
 import { Helmet } from 'react-helmet';
+import PortfolioSource from './data/Portfolio.Source';
 
 /**
  * Component to display projects of company
@@ -14,7 +15,7 @@ class Portfolio extends React.PureComponent {
     super(props);
 
     const { items, types } = PortfolioBuilder(
-      [{ type: 'mobile' }, { type: 'web' }, { type: 'all' }, { type: 'web' }],
+      PortfolioSource(),
       this.props.history
     );
 

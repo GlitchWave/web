@@ -7,7 +7,7 @@ const PortfolioBuilder = (arrayOfItems, history) => {
         types: types,
         items: (arrayOfItems.map((el, i) => {
            types.push({type: el.type, id: i});
-           return <PortfolioItem key={i} history={history} fullContent={{}} shortContent={{title: '', description: ''}} />;
+           return <PortfolioItem key={i} history={history} fullContent={el.fullContent} shortContent={el.shortContent} />;
         }))
     }
 }

@@ -7,18 +7,13 @@ const PortfolioItem = props => {
     <div
       className="PortfolioItem"
       onClick={() => {
-        props.history.push('/portfolio/kek', { kek: 'kek' });
+        props.history.push('/portfolio/kek', props.fullContent);
       }}
     >
       <div className="PortfolioItemThumbnail" />
       <div className="PortfolioItemDescription">
-        <h3>Title</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, quos
-          cum nam exercitationem voluptatum maxime a incidunt, quas velit
-          excepturi nisi voluptatibus sed cupiditate, perferendis laudantium
-          ratione sunt vitae unde!
-        </p>
+        <h3>{props.shortContent.title}</h3>
+        <p>{props.shortContent.description}</p>
       </div>
     </div>
   );
